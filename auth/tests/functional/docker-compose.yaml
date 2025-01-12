@@ -1,0 +1,60 @@
+services:
+  auth-api:
+    build: ../../.
+    image: auth-api-image
+    networks:
+      - auth-tests
+    env_file:
+      - ./.env
+    expose:
+      - 8000
+    restart: always
+    depends_on:
+      - redis-auth-tests
+      - postgres-auth-tests
+
+  auth-tests:
+    image: auth-api-image
+    entrypoint: >
+      sh -c "chmod +x /app/tests/functional/start-tests.sh
+      && /app/tests/functional/start-tests.sh"
+    networks:
+      - auth-tests
+    env_file:
+      - ./.env
+    depends_on:
+      - auth-api
+      - redis-auth-tests
+      - postgres-auth-tests
+
+  redis-auth-tests:
+    image: redis:7.2.5
+    restart: always
+    networks:
+      - auth-tests
+    expose:
+      - 6379
+    volumes:
+      - redis_auth_tests:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+
+  postgres-auth-tests:
+    image: postgres:16.3
+    restart: always
+    expose:
+      - 5432
+    volumes:
+      - psql_auth_tests:/var/lib/postgresql/data
+    env_file:
+      - ./.psql-auth.env
+    networks:
+      - auth-tests
+
+networks:
+  auth-tests:
+    driver: bridge
+
+volumes:
+  redis_auth_tests:
+  psql_auth_tests:

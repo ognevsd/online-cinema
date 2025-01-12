@@ -1,0 +1,211 @@
+name: movies
+services:
+  # API service
+  movies-api:
+    build: ./app
+    env_file:
+      - ./app/.env
+    expose:
+      - 8000
+    networks:
+      - api
+    restart: always
+    depends_on:
+      - redis-api
+      - elasticsearch
+  redis-api:
+    image: redis:7.2.5
+    restart: always
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    networks:
+      - api
+    volumes:
+      - redis_data_api:/data
+      - ./config/redis-movies-api.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+  nginx-movies-api:
+    image: nginx:1.27.0
+    expose:
+      - 80
+    ports:
+      - 8001:80
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/nginx-movies-api-config:/etc/nginx/conf.d:ro
+    networks:
+      - api
+    depends_on:
+      - movies-api
+
+  # ETL service
+  redis-etl:
+    image: redis:7.2.5
+    restart: always
+    networks:
+      - etl
+    expose:
+      - 6379
+    volumes:
+      - redis_data_etl:/data
+      - ./config/redis-etl.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+  etl:
+    container_name: etl
+    build: ./etl
+    env_file:
+      - ./etl/.env
+    networks:
+      - etl
+    depends_on:
+      - elasticsearch
+      - redis-etl
+      - postgres-movies
+
+  # Common service
+  elasticsearch:
+    image: elasticsearch:8.6.2
+    restart: always
+    expose:
+      - 9200
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms200m -Xmx200m
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    networks:
+      - etl
+      - api
+  postgres-movies:
+    image: postgres:16.3
+    restart: always
+    expose:
+      - 5432
+    volumes:
+      - $HOME/postgresql/data:/var/lib/postgresql/data
+    env_file:
+      - ./.psql-etl.env
+    networks:
+      - etl
+      - admin
+  jaeger:
+    image: jaegertracing/jaeger:2.1.0
+    restart: always
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    expose:
+      - 4318
+      - 16686
+    ports:
+      - 16686:16686
+    networks:
+      - auth
+      - api
+
+  # Auth service
+  auth-api:
+    build: ./auth
+    env_file:
+      - ./auth/.env
+    expose:
+      - 8000
+    networks:
+      - auth
+    restart: always
+    depends_on:
+      - redis-auth
+      - postgres-auth
+  nginx-auth:
+    image: nginx:1.27.0
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/nginx-auth-api-config:/etc/nginx/conf.d:ro
+    depends_on:
+      - auth-api
+    networks:
+      - auth
+    expose:
+      - 80
+    ports:
+      - 80:80
+  postgres-auth:
+    image: postgres:16.3
+    restart: always
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    volumes:
+      - $HOME/postgresql/auth-data:/var/lib/postgresql/data
+      - ./config/psql_init:/docker-entrypoint-initdb.d
+    env_file:
+      - ./.psql-auth.env
+    networks:
+      - auth
+  redis-auth:
+    image: redis:7.2.5
+    restart: always
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    networks:
+      - auth
+    volumes:
+      - redis_data_auth:/data
+      - ./config/redis-auth.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+
+  # Admin panel
+  admin-service:
+    build: ./admin-panel
+    env_file:
+      - ./admin-panel/.env
+    environment:
+      - DEBUG=true
+    expose:
+      - 8000
+    volumes:
+      - static-data:/vol/static
+    depends_on:
+      - postgres-movies
+    networks:
+      - admin
+
+  nginx-admin:
+    image: nginx:1.27.0
+    expose:
+      - 80
+    volumes:
+      - static-data:/vol/static
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/nginx-admin-config:/etc/nginx/conf.d:ro
+    networks:
+      - admin
+    depends_on:
+      - admin-service
+      - postgres-movies
+
+networks:
+  api:
+    driver: bridge
+  etl:
+    driver: bridge
+  auth:
+    driver: bridge
+  admin:
+    driver: bridge
+  common:
+    driver: bridge
+
+volumes:
+  redis_data_api:
+  redis_data_etl:
+  redis_data_auth:
+  es_data:
+  static-data:

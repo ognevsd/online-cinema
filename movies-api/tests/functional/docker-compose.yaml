@@ -1,0 +1,67 @@
+services:
+  movies_api:
+    build: ../../.
+    image: movies-api-image
+    networks:
+      - tests
+    env_file:
+      - ./.env
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+    restart: always
+    depends_on:
+      - redis-tests
+      - elasticsearch-tests
+
+  tests:
+    image: movies-api-image
+    entrypoint: >
+      sh -c "chmod +x /app/tests/functional/start-tests.sh
+      && /app/tests/functional/start-tests.sh"
+    networks:
+      - tests
+    env_file:
+      - ./.env
+    depends_on:
+      - redis-tests
+      - elasticsearch-tests
+
+  redis-tests:
+    image: redis:7.2.5
+    restart: always
+    networks:
+      - tests
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    volumes:
+      - redis_data_tests:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+
+  elasticsearch-tests:
+    image: elasticsearch:8.6.2
+    restart: always
+    expose:
+      - 9200
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms200m -Xmx200m
+    volumes:
+      - es_data_tests:/usr/share/elasticsearch/data
+    networks:
+      - tests
+
+networks:
+  tests:
+    driver: bridge
+
+volumes:
+  redis_data_tests:
+  es_data_tests:

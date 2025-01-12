@@ -1,0 +1,734 @@
+[
+    {
+        "uuid": "a5a8f573-3cee-4ccc-8a2b-91cb9f55250a",
+        "full_name": "George Lucas",
+        "films": [
+            {
+                "uuid": "88faa02d-f26f-40a1-9cc6-8045ed08d51e",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "57beb3fd-b1c9-4f8a-9c06-2da13f95251c",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "64aa7000-698f-4332-b52f-9469e4d44ee1",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "75609cee-bc87-493d-8c1f-32c7e8ccc368",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "991d143e-1342-4f7c-abf0-a9ede3abba20",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "3b1d0e70-42e5-4c9b-98cf-2681c420a99b",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "e5a21648-59b1-4672-ac3b-867bcd64b6ea",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "516f91da-bd70-4351-ba6d-25e16b7713b7",
+                "roles": [
+                    "writer",
+                    "director"
+                ]
+            },
+            {
+                "uuid": "025c58cd-1b7e-43be-9ffb-8571a613579b",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "c35dc09c-8ace-46be-8941-7e50b768ec33",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "3a28f10a-433e-431c-8e7b-cc3f90af5a41",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "c4c5e3de-c0c9-4091-b242-ceb331004dfd",
+                "roles": [
+                    "director",
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "6313d0f5-e6a6-4071-a0c2-3d737fd1d56d",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "6cb927b3-4760-46c8-9002-ff4a47d57a4a",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "c8f57f93-b02a-40d4-ba55-9600cceddd7e",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "134989c3-3b20-4ae7-8092-3e8ad2333d59",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "dcab54f1-6958-4699-b3f5-2fb92c185b33",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "0659e0e6-504e-4482-8aa9-f7530f36cae2",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "4f53452f-a402-4a76-89fd-f034eeb8d657",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "b503ced6-fff1-493a-ad41-73449b55ffee",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "3b914679-1f5e-4cbd-8044-d13d35d5236c",
+                "roles": [
+                    "writer",
+                    "director"
+                ]
+            },
+            {
+                "uuid": "f241a62c-2157-432a-bbeb-9c579c8bc18b",
+                "roles": [
+                    "director",
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "f553752e-71c7-4ea0-b780-41408516d0f4",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "92dcddff-a70e-497c-92dc-0da12d1d528a",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "118fd71b-93cd-4de5-95a4-e1485edad30e",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "943946ed-4a2b-4c71-8e0b-a58a11bd1323",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "cd19b384-babd-4b0c-ba0a-5c272bcf0238",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "d6a7409f-87cd-49d7-8803-951a7352c2ce",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "12a8279d-d851-4eb9-9d64-d690455277cc",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "dc2dbf5d-de5d-4153-a049-51ba44f15e04",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "3cb639db-cd8a-48b0-90e3-9def109a4492",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "07f8bdbe-5246-4dfc-8d38-85043aeb307b",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+                "roles": [
+                    "writer",
+                    "director"
+                ]
+            },
+            {
+                "uuid": "46f15353-2add-415d-9782-fa9c5b8083d5",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "48495445-f04d-4d4c-9249-1faa28fc64eb",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "983e0b41-dd17-4fd6-b4e7-771f975fdc19",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "5c612da0-9c15-48db-b46e-e6c82b071a9b",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "73ecd1e6-6326-405a-b51b-69008f383b72",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "daae47e4-cbd0-4ffd-a150-55201b357d5b",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "e99620fb-11bb-481b-8702-a14efa6bb0ef",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "a8f6bd5b-036a-4d79-b952-3c7b5aa3ea83",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "19babc93-62f5-481a-b6fe-9ebfef689cbc",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "0312ed51-8833-413f-bff5-0e139c11264a",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "5d62b55c-1ed5-4563-ae80-10c4baa21a36",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "3ba6c11a-0db6-4144-bc9d-c7e04b817dd2",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "d6a04742-cc3d-43f7-9657-e3c73b37dfaa",
+        "full_name": "George Cukor",
+        "films": [
+            {
+                "uuid": "ddbc2fc3-389e-419f-a8fa-59e6cee10802",
+                "roles": [
+                    "director"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "c2631edf-33c3-4729-adda-7a25b51f5f20",
+        "full_name": "George Geertsen",
+        "films": [
+            {
+                "uuid": "a59f548f-e660-4994-ae5e-ed3c911225d3",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "89aa1224-d1fd-417c-8561-6993212ecb48",
+        "full_name": "George Lazenby",
+        "films": [
+            {
+                "uuid": "38f21901-7dcb-467f-b512-550955c072d2",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "608ebcf6-b934-47fc-a411-a3640904582a",
+        "full_name": "George Almond",
+        "films": [
+            {
+                "uuid": "ec07f763-f2a1-49b5-b137-2e31f64cb090",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "96f18d84-55e0-4718-b87f-4a9e63544d76",
+        "full_name": "George Germanetti",
+        "films": [
+            {
+                "uuid": "b164fef5-0867-46d8-b635-737e1721f6bf",
+                "roles": [
+                    "director"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "eebeb263-aafa-48c8-8845-267e8831f621",
+        "full_name": "George O'Brien",
+        "films": [
+            {
+                "uuid": "592a5c17-d8e0-4e4f-bf4d-631c6c6bbe71",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "14946aea-53fe-4d06-986d-c888227a0ae9",
+        "full_name": "George Stroumboulopoulos",
+        "films": [
+            {
+                "uuid": "2f0b8fa3-8930-4046-bdcf-2f257899a2b9",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "a4fc2b18-b89b-47f5-8d11-8b26e26fcdb9",
+        "full_name": "George Takei",
+        "films": [
+            {
+                "uuid": "ab1643e7-08b9-43dc-8265-ffaba9635a4d",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "703d7f37-2933-436e-826e-0b192601e198",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "ccaff3f0-b2e9-4993-9708-a1c1fcef337a",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "9e1ec2e3-336e-4b9f-a6e0-f93c2ea9ee6d",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "db5dcded-29da-4c96-91a2-df1407f0a80a",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "a57c7839-6af9-4f97-8899-ab29f193988e",
+        "full_name": "George Nichols",
+        "films": [
+            {
+                "uuid": "24eafcd7-1018-4951-9e17-583e2554ef0a",
+                "roles": [
+                    "director"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "68ae499d-99cd-44a8-ae14-f66f0afae7dd",
+        "full_name": "George Eastman",
+        "films": [
+            {
+                "uuid": "78c73283-cd39-48d8-aa59-9f573f740030",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "c3c3ba1f-d4dd-4eaf-9ec5-5517ca70d793",
+        "full_name": "George Fisher",
+        "films": [
+            {
+                "uuid": "927602cf-ac67-4917-a2ea-7e1350fef2f6",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "fa5cd6d8-e79e-45b8-a672-701f0cbe888a",
+        "full_name": "George Segal",
+        "films": [
+            {
+                "uuid": "98bff7a3-0204-482b-aea5-8b4b70b68248",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "9adf0539-241e-4b7b-8144-dd345da6b2e0",
+        "full_name": "George Marshall",
+        "films": [
+            {
+                "uuid": "5044be46-fafc-4f98-8577-5da9892b1cb9",
+                "roles": [
+                    "director"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "d076a929-dd17-41c8-b368-64297ff677ec",
+        "full_name": "George Bush",
+        "films": [
+            {
+                "uuid": "3431e396-04be-415f-8c8c-7f1dde2330c3",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "7c6c5f66-4322-483d-8307-655294185026",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "7d66cabf-accb-485a-80f8-280cd6dc893a",
+        "full_name": "George DelHoyo",
+        "films": [
+            {
+                "uuid": "2680437f-dd09-49c2-a72c-06139a1c89bb",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "79c1ed59-76ef-4634-bd06-c6987b0ed7a8",
+        "full_name": "George Sherman",
+        "films": [
+            {
+                "uuid": "e9bba41c-d091-4d4f-890f-ae4e22dde857",
+                "roles": [
+                    "director"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "45d15379-d655-4ec2-bab9-a7c35cd8d036",
+        "full_name": "George Nicholson-Sibley",
+        "films": [
+            {
+                "uuid": "fb162b57-0f64-4a80-8b3f-5c7a400dffa0",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "983e0b41-dd17-4fd6-b4e7-771f975fdc19",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "cd080b56-0285-4a00-93a5-48d87e23178e",
+        "full_name": "George C. Scott",
+        "films": [
+            {
+                "uuid": "cc4a05f1-1900-402c-8f69-a97ce2e33f6f",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "2538b84d-1e2a-49f8-87ae-0b9af26aa196",
+        "full_name": "George Henry Horton",
+        "films": [
+            {
+                "uuid": "0ba663d3-ecb7-4528-9e1a-03cf8da143a0",
+                "roles": [
+                    "director",
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "79793f5a-cb0c-407d-b35b-d91ac779a355",
+        "full_name": "George Stevens Jr.",
+        "films": [
+            {
+                "uuid": "06bd9964-5617-460b-a1bf-74542e89fe43",
+                "roles": [
+                    "writer"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "0cf6a8b6-047a-4bab-a264-6fac8a630acb",
+        "full_name": "George 'Gabby' Hayes",
+        "films": [
+            {
+                "uuid": "9905f1ff-5da7-4142-97e6-7a0677228493",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "06fed4f1-d5e4-4b31-92d9-9e8072b02af3",
+        "full_name": "George S. Kaufman",
+        "films": [
+            {
+                "uuid": "66d7de47-16d7-40e9-9d08-6e1773bc0bc3",
+                "roles": [
+                    "writer"
+                ]
+            },
+            {
+                "uuid": "5044be46-fafc-4f98-8577-5da9892b1cb9",
+                "roles": [
+                    "writer"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "2b44538d-c247-4203-accf-105008f49a30",
+        "full_name": "George W. Bush",
+        "films": [
+            {
+                "uuid": "7c6c5f66-4322-483d-8307-655294185026",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "c39259c3-6bb2-432c-b8a2-4d1b0caca004",
+        "full_name": "George Doty IV",
+        "films": [
+            {
+                "uuid": "6d647d21-0443-47f2-ab0c-c1aab661c9a1",
+                "roles": [
+                    "writer"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "b5d2b63a-ed1f-4e46-8320-cf52a32be358",
+        "full_name": "Carrie Fisher",
+        "films": [
+            {
+                "uuid": "12a8279d-d851-4eb9-9d64-d690455277cc",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "134989c3-3b20-4ae7-8092-3e8ad2333d59",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "46f15353-2add-415d-9782-fa9c5b8083d5",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "025c58cd-1b7e-43be-9ffb-8571a613579b",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "0312ed51-8833-413f-bff5-0e139c11264a",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "4f53452f-a402-4a76-89fd-f034eeb8d657",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "f241a62c-2157-432a-bbeb-9c579c8bc18b",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "45fdde8d-fb64-4345-a465-d19cac7caa2e",
+        "full_name": "Nancy Fisher",
+        "films": [
+            {
+                "uuid": "31a801ea-e62e-4a7a-b7c4-d494df0df4ef",
+                "roles": [
+                    "writer"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "8cd34a1b-a27c-4e04-8b78-473a0761e8d6",
+        "full_name": "Miles Fisher",
+        "films": [
+            {
+                "uuid": "31a801ea-e62e-4a7a-b7c4-d494df0df4ef",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "c3c3ba1f-d4dd-4eaf-9ec5-5517ca70d793",
+        "full_name": "George Fisher",
+        "films": [
+            {
+                "uuid": "927602cf-ac67-4917-a2ea-7e1350fef2f6",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    },
+    {
+        "uuid": "6dd77305-18ee-4d2e-9215-fd1a496ccfdf",
+        "full_name": "Mat Lucas",
+        "films": [
+            {
+                "uuid": "fdfc8266-5ece-4d85-b614-3cfe9be97b71",
+                "roles": [
+                    "actor"
+                ]
+            },
+            {
+                "uuid": "044beafe-fe25-4edc-95f4-adbb8979c35b",
+                "roles": [
+                    "actor"
+                ]
+            }
+        ]
+    }
+]
