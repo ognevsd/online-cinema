@@ -1,27 +1,27 @@
 # Auth API
 
-Сервис авторизации с системой ролей.
+Centralized authentication and authorization system with Role-based permission system
+and OAuth 2.0 integration with Google SSO.
 
-Используемые технологии:
+Tech stack:
 - Nginx
 - FastAPI
 - Redis
 - Postgres
 
-Доступ предоставляется по ролям (RBAC)
 
-## Создание суперпользователя
+## Creating superuser
 
-Для создания суперпользователя можно использовать cli:
+CLI can be used to create superuser
 
 ```
 python src/auth_cli.py createsuperuser
 ```
 
-## Схема базы данных
+## Database schema
 
-Данные о пользователе, существующих ролях, история логинов, а также отношения 
-между пользователями и ролями хранятся в Postgres.
+Data about user, existing roles, login history and relationship between 
+roles and users is stored in PostgreSQL
 
 ```mermaid
 erDiagram
@@ -57,9 +57,9 @@ erDiagram
     }
 ```
 
-## Схема аутентификации
+## Authentication Schema
 
-Получение токена
+Receiving token
 ```mermaid
 sequenceDiagram
     participant User
@@ -75,7 +75,7 @@ sequenceDiagram
     AuthAPI ->> User: Token and refresh token
 ```
 
-Использование токена
+Using token
 ```mermaid
 sequenceDiagram
     participant User
@@ -94,7 +94,7 @@ sequenceDiagram
     API ->> User: data
 ```
 
-Обновление токена
+Refresh token
 ```mermaid
 sequenceDiagram
     participant User
@@ -124,11 +124,11 @@ sequenceDiagram
     AuthAPI --> User: OK
 ```
 
-## Обработка ошибок
+## Errors
 
 | Ошибка | Ответ API |
 | ------ | --------- |
-| Истекший токен | `401 Unauthorized` |
-| Неверная подпись токена | `401 Unauthorized` |
-| Нет доступа к ресурсу | `403 Forbidden` |
-| Имя пользователя уже занято | `409 Conflict` |
+| Expired token | `401 Unauthorized` |
+| Invalid token signature| `401 Unauthorized` |
+| Not enough rights to access resource | `403 Forbidden` |
+| Username is already taken | `409 Conflict` |
